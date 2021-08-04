@@ -1,0 +1,34 @@
+@import 'variables.scss';
+
+.hex {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  padding: calc(#{$selector-size}/ 2) #{$selector-size};
+  &__label {
+    top: calc(#{$selector-size}/ -2);
+    text-align: center;
+    left: calc(50% - #{$selector-size});
+    background: #fff;
+    position: absolute;
+  }
+  &__input {
+    flex-grow: 1;
+    margin-left: $selector-size;
+    border: none;
+    text-align: center;
+    &:focus {
+      border: none;
+    }
+    &:focus-visible {
+      border: none;
+      outline: none;
+    }
+  }
+  &__focus {
+    width: $selector-size;
+    height: $selector-size;
+  }
+}

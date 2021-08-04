@@ -1,0 +1,22 @@
+@import 'variables.scss';
+
+.hue-selector {
+  height: $selector-size;
+  &__background {
+    border-radius: calc(#{$selector-size}/ 2);
+    background: linear-gradient(
+      to right,
+      #ff0000,
+      #ffff00 16%,
+      #00ff00 33%,
+      #00ffff 50%,
+      #0000ff 67%,
+      #ff00ff 83%,
+      #ff0000 100%
+    );
+  }
+  &__select-mark {
+    top: calc(-0.25 * #{$selector-size});
+    left: calc(var(--progress) - (0.75 * #{$selector-size}));
+  }
+}

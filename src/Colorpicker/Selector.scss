@@ -1,0 +1,23 @@
+@import 'variables.scss';
+
+.selector {
+  position: relative;
+  box-sizing: border-box;
+
+  margin-bottom: #{$selector-size};
+  cursor: pointer;
+  &__background {
+    width: 100%;
+    height: 100%;
+    // border-radius: calc(#{$selector-size}/ 2);
+  }
+  &__select-mark {
+    position: absolute;
+    width: calc(1.5 * #{$selector-size} - 4px);
+    height: calc(1.5 * #{$selector-size} - 4px);
+    border-radius: calc(1.5 * #{$selector-size});
+    background-color: var(--color);
+    border: 2px solid #ffffff;
+    z-index: 100 !important;
+  }
+}
